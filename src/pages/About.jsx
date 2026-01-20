@@ -1,33 +1,6 @@
 const About = () => {
   return (
     <section id="about" className="mb-16">
-      {/* Hero Section */}
-      <article className="bg-linear-to-r from-blue-50 to-indigo-50 rounded-lg p-8 md:p-12 mb-12">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
-          <figure className="shrink-0">
-            <img 
-              src="https://via.placeholder.com/300x300" 
-              alt="Wendyll Jay Tautoan" 
-              className="w-64 h-64 rounded-full object-cover shadow-lg"
-            />
-          </figure>
-          
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              HELLO I AM WENDYLL JAY TAUTOAN
-            </h1>
-            <p className="text-lg text-gray-700 mb-6">
-              A developer with a passion for creating innovative and efficient solutions through code. 
-              Get to know me more!
-            </p>
-            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors shadow-md">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </article>
-
-      {/* About Me Section */}
       <article className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-gray-900">About Me</h2>
         
