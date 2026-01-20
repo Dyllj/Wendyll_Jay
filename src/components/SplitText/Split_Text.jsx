@@ -31,14 +31,18 @@ const SplitText = ({
     onCompleteRef.current = onLetterAnimationComplete;
   }, [onLetterAnimationComplete]);
 
+  // Fixed: Move font loading check outside of effect to avoid cascading renders
   useEffect(() => {
-    if (document.fonts.status === 'loaded') {
-      setFontsLoaded(true);
-    } else {
-      document.fonts.ready.then(() => {
+    const checkFonts = async () => {
+      if (document.fonts.status === 'loaded') {
         setFontsLoaded(true);
-      });
-    }
+      } else {
+        await document.fonts.ready;
+        setFontsLoaded(true);
+      }
+    };
+    
+    checkFonts();
   }, []);
 
   useGSAP(
@@ -51,8 +55,8 @@ const SplitText = ({
       if (el._rbsplitInstance) {
         try {
           el._rbsplitInstance.revert();
-        } catch (_) {
-          /* ignore */
+        } catch {
+          // ignore errors during revert
         }
         el._rbsplitInstance = null;
       }
@@ -120,8 +124,8 @@ const SplitText = ({
         });
         try {
           splitInstance.revert();
-        } catch (_) {
-          /* ignore */
+        } catch {
+          // ignore errors during cleanup
         }
         el._rbsplitInstance = null;
       };
