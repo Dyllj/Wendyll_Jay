@@ -3,23 +3,24 @@ import About from './pages/About'
 import Works from './pages/Work'
 import Contact from './pages/Contact'
 import SplitText from './components/SplitText/Split_Text'
+import AnimatedButton from './components/AnimationHover/Animation_Hover'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
+    <div className="min-h-screen bg-zinc-800">
+      <header className="bg-zinc-200 shadow-lg fixed w-full top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold text-gray-900">
+            <div className="text-2xl font-bold text-zinc-800">
               Portfolio
             </div>
             
             <nav aria-label="Main navigation">
-              <ul className="flex gap-8">
+              <ul className="flex gap-15">
                 <li>
                   <a 
                     href="#about" 
-                    className="text-gray-700 hover:text-gray-900 transition-colors"
+                    className="text-zinc-800 p-2 rounded-xl m-auto hover:bg-zinc-800 hover:text-zinc-100 transition-colors font-medium"
                   >
                     About Me
                   </a>
@@ -27,7 +28,7 @@ function App() {
                 <li>
                   <a 
                     href="#works" 
-                    className="text-gray-700 hover:text-gray-900 transition-colors"
+                    className="text-zinc-800 p-2 rounded-xl m-auto hover:bg-zinc-800 hover:text-zinc-100 transition-colors font-medium"
                   >
                     Works
                   </a>
@@ -35,7 +36,7 @@ function App() {
                 <li>
                   <a 
                     href="#contact" 
-                    className="text-gray-700 hover:text-gray-900 transition-colors"
+                    className="text-zinc-800 p-2 rounded-xl m-auto hover:bg-zinc-800 hover:text-zinc-100 transition-colors font-medium"
                   >
                     Contact
                   </a>
@@ -47,30 +48,40 @@ function App() {
       </header>
       
       {/* Hero Section */}
-      <article className="bg-linear-to-r from-blue-50 to-indigo-50 min-h-screen flex items-center">
+      <article className="bg-linear-to-b from-zinc-200 to-zinc-800 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-10">
             <figure className="shrink-0">
               <img 
                 src="https://via.placeholder.com/300x300" 
                 alt="Wendyll Jay Tautoan" 
-                className="w-64 h-64 rounded-full object-cover shadow-lg"
+                className="w-64 h-64 rounded-full object-cover shadow-2xl ring-4 ring-zinc-800"
               />
             </figure>
             
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                HELLO I AM WENDYLL JAY TAUTOAN
-              </h1>
-              <p className="text-lg text-gray-700 mb-6">
+              <SplitText
+                text="HELLO I AM WENDYLL JAY TAUTOAN"
+                className="text-4xl md:text-5xl font-bold text-zinc-900 mb-4"
+                delay={50}
+                duration={1.25}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="left"
+                tag="h1"
+              />
+              <p className="text-lg text-zinc-800">
                 A developer with a passion for creating innovative and efficient solutions through code. 
+              </p>
+              <p className="text-lg text-zinc-800 mb-6">
                 Get to know me more!
               </p>
-              <a 
-                href="#about" 
-                className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors shadow-md"
-              >
-                Learn More
+              <a href="#about">
+                <AnimatedButton />
               </a>
             </div>
           </div>
