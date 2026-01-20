@@ -1,4 +1,7 @@
 import './App.css'
+import About from './pages/About'
+import Works from './pages/Work'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -43,20 +46,9 @@ function App() {
       </header>
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <section id="about" className="mb-16">
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <p className="text-gray-600">Your about section content goes here.</p>
-        </section>
-        
-        <section id="works" className="mb-16">
-          <h2 className="text-3xl font-bold mb-4">Works</h2>
-          <p className="text-gray-600">Your works section content goes here.</p>
-        </section>
-        
-        <section id="contact">
-          <h2 className="text-3xl font-bold mb-4">Contact</h2>
-          <p className="text-gray-600">Your contact section content goes here.</p>
-        </section>
+        <About />
+        <Works />
+        <Contact />
       </main>
     </div>
   )
