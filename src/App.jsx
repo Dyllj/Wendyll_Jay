@@ -3,7 +3,8 @@ import About from './pages/About'
 import Works from './pages/Work'
 import Contact from './pages/Contact'
 import SplitText from './components/SplitText/Split_Text'
-import AnimatedButton from './components/AnimationHover/Animation_Hover'
+import Button from './components/AnimationHover/Animation_Hover'
+import ScrollFadeIn from './components/ScrollFadeIn/Scroll_FadeIn'
 
 function App() {
   return (
@@ -74,15 +75,17 @@ function App() {
                 textAlign="left"
                 tag="h1"
               />
-              <p className="text-lg text-zinc-800">
+              <ScrollFadeIn>
+              <p className="text-xl font-bold text-zinc-800">
                 A developer with a passion for creating innovative and efficient solutions through code. 
               </p>
-              <p className="text-lg text-zinc-800 mb-6">
+              <p className="text-xl font-bold text-zinc-800 mb-6">
                 Get to know me more!
               </p>
               <a href="#about">
-                <AnimatedButton />
+                <Button />
               </a>
+              </ScrollFadeIn>
             </div>
           </div>
         </div>
