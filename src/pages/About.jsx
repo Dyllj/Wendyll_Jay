@@ -2,6 +2,7 @@ import SplitText from '../components/SplitText/Split_Text'
 import ScrollFadeIn from '../components/ScrollFadeIn/Scroll_FadeIn';
 import SkillCard from '../components/SkillCard/SkillCard';
 import { FaCode, FaDatabase, FaTools, FaMicrochip, FaBox } from 'react-icons/fa';
+import W from '../assets/W.png';
 
 const About = () => {
   const skillsData = [
@@ -12,7 +13,7 @@ const About = () => {
     },
         {
       title: "Frameworks & Libraries",
-      skills: ["React", "Node.js", "Flask", "Bootstrap", "Tailwind CSS"],
+      skills: ["React", "Node.js", "Flask", "Bootstrap", "Tailwind"],
       icon: FaBox
     },
     {
@@ -41,9 +42,9 @@ const About = () => {
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-6">
                 <img 
-                  src="https://via.placeholder.com/300x300" 
+                  src={W}
                   alt="Wendyll Jay Tautoan" 
-                  className="w-32 h-32 border-2 border-gray-300 rounded-full hover:scale-105 hover:shadow-xl transition-all ease-in-out"
+                  className="w-32 h-32 rounded-full hover:scale-105 hover:shadow-2xl transition-all ease-in-out"
                 />
                 <SplitText
                   text="About Me"
@@ -75,16 +76,16 @@ const About = () => {
             <aside className="mt-25 ml-15 p-5 rounded-lg w-full max-w-sm h-fit">
               <h3 className="text-2xl font-semibold mb-4 text-zinc-200">Key Facts</h3>
               <ul className="space-y-3">
-                <li className="flex items-center justify-center text-gray-700 bg-zinc-200 w-45 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-45 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200  transition-all ease-in-out cursor-pointer">
                   IOT Development
                 </li>
-                <li className="flex items-center justify-center text-gray-700 bg-zinc-200 w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
                   UI/UX Design
                 </li>
-                <li className="flex items-center justify-center text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
                   Front-end Development
                 </li>
-                <li className="flex items-center justify-center text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
                   Full-Stack Developer
                 </li>
               </ul>

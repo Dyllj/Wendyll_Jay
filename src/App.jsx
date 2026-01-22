@@ -5,6 +5,7 @@ import Contact from './pages/Contact'
 import SplitText from './components/SplitText/Split_Text'
 import Button from './components/AnimationHover/Animation_Hover'
 import ScrollFadeIn from './components/ScrollFadeIn/Scroll_FadeIn'
+import myself from './assets/myself.png';
 
 function App() {
   return (
@@ -61,11 +62,13 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <figure className="shrink-0">
+              <ScrollFadeIn>
               <img 
-                src="https://via.placeholder.com/300x300" 
+                src={myself}
                 alt="Wendyll Jay Tautoan" 
-                className="w-64 h-64 rounded-full object-cover shadow-2xl ring-4 ring-zinc-800"
+                className="w-80 h-100 rounded-full object-cover shadow-2xl ring-4 ring-zinc-800"
               />
+              </ScrollFadeIn>
             </figure>
             
             <div className="flex-1 text-center md:text-left">
