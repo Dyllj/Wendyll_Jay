@@ -4,18 +4,21 @@ import styled from 'styled-components';
 const Radio = () => {
   return (
     <StyledWrapper>
-      <div className="radio-inputs">
-        <label className="radio">
-          <input type="radio" name="radio" defaultChecked />
-          <span className="name">All</span>
+      <div className="radio-input-wrapper">
+        <label className="label">
+          <input defaultValue="value-2" name="value-radio" id="value-2" className="radio-input" type="radio" />
+          <div className="radio-design" />
+          <div className="label-text">Clouds</div>
         </label>
-        <label className="radio">
-          <input type="radio" name="radio" />
-          <span className="name">Featured</span>
+        <label className="label">
+          <input defaultValue="value-3" name="value-radio" id="value-3" className="radio-input" type="radio" />
+          <div className="radio-design" />
+          <div className="label-text">Earth</div>
         </label>
-        <label className="radio">
-          <input type="radio" name="radio" />
-          <span className="name">Personal</span>
+        <label className="label">
+          <input defaultValue="value-4" name="value-radio" id="value-4" className="radio-input" type="radio" />
+          <div className="radio-design" />
+          <div className="label-text">Water</div>
         </label>
       </div>
     </StyledWrapper>
@@ -23,114 +26,69 @@ const Radio = () => {
 }
 
 const StyledWrapper = styled.div`
-  .radio-inputs {
-    position: relative;
+  /* MAIN */
+  /* =============================================== */
+  .label {
     display: flex;
-    flex-wrap: wrap;
-    border-radius: 0.5rem;
-    background-color: #eee;
-    box-sizing: border-box;
-    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
-    padding: 0.25rem;
-    width: 300px;
-    font-size: 14px;
-  }
-
-  .radio-inputs .radio {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  .radio-inputs .radio input {
-    display: none;
-  }
-
-  .radio-inputs .radio .name {
-    display: flex;
-    cursor: pointer;
     align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    border: none;
-    padding: 0.5rem 0;
-    color: rgba(51, 65, 85, 1);
-    transition: all 0.15s ease-in-out;
+    border-radius: 100px;
+    padding: 14px 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: .3s;
   }
 
-  .radio-inputs .radio input:checked + .name {
-    background-color: #fff;
-    font-weight: 600;
+  .label:hover,
+  .label:focus-within,
+  .label:active {
+    background: hsla(0, 0%, 80%, .14);
   }
 
-  /* Hover effect */
-  .radio-inputs .radio:hover .name {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-  /* Animation */
-  .radio-inputs .radio input:checked + .name {
-    position: relative;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    animation: select 0.3s ease;
-  }
-
-  @keyframes select {
-    0% {
-      transform: scale(0.95);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  /* Particles */
-  .radio-inputs .radio input:checked + .name::before,
-  .radio-inputs .radio input:checked + .name::after {
-    content: "";
+  .radio-input {
     position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #3b82f6;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
     opacity: 0;
-    animation: particles 0.5s ease forwards;
+    z-index: -1;
   }
 
-  .radio-inputs .radio input:checked + .name::before {
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
+  .radio-design {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+    background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+    position: relative;
   }
 
-  .radio-inputs .radio input:checked + .name::after {
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
+  .radio-design::before {
+    content: '';
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+    transition: .3s;
   }
 
-  @keyframes particles {
-    0% {
-      opacity: 0;
-      transform: translateX(-50%) translateY(0);
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(-50%) translateY(var(--direction));
-    }
+  .radio-input:checked+.radio-design::before {
+    transform: scale(0);
   }
 
-  .radio-inputs .radio input:checked + .name::before {
-    --direction: -10px;
+  .label-text {
+    color: hsl(0, 0%, 60%);
+    margin-left: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    transition: .3s;
   }
 
-  .radio-inputs .radio input:checked + .name::after {
-    --direction: 10px;
+  .radio-input:checked~.label-text {
+    color: hsl(0, 0%, 40%);
   }`;
 
 export default Radio;

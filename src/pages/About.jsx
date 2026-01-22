@@ -44,7 +44,7 @@ const About = () => {
                 <img 
                   src={W}
                   alt="Wendyll Jay Tautoan" 
-                  className="w-32 h-32 rounded-full hover:scale-105 hover:shadow-2xl transition-all ease-in-out"
+                  className="w-32 h-32 rounded-full hover:scale-105 hover:shadow-md hover:shadow-amber-600 transition-all ease-in-out"
                 />
                 <SplitText
                   text="About Me"
@@ -76,16 +76,16 @@ const About = () => {
             <aside className="mt-25 ml-15 p-5 rounded-lg w-full max-w-sm h-fit">
               <h3 className="text-2xl font-semibold mb-4 text-zinc-200">Key Facts</h3>
               <ul className="space-y-3">
-                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-45 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200  transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-45 p-2 rounded-xl hover:bg-zinc-800 hover:border-amber-600 hover:text-zinc-200  transition-all ease-in-out cursor-pointer">
                   IOT Development
                 </li>
-                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer">
                   UI/UX Design
                 </li>
-                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer">
                   Front-end Development
                 </li>
-                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer">
+                <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600  transition-all ease-in-out cursor-pointer">
                   Full-Stack Developer
                 </li>
               </ul>
