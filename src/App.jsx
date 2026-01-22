@@ -13,7 +13,16 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold text-zinc-800">
-              Portfolio
+              <a 
+                href="#" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="text-2xl font-bold text-zinc-800 cursor-pointer hover:text-zinc-600 transition-colors tracking-widest"
+              >
+                DYLL J
+              </a>
             </div>
             <nav aria-label="Main navigation">
               <ul className="flex gap-15">
@@ -22,7 +31,7 @@ function App() {
                     href="#about" 
                     className="text-zinc-800 p-2 rounded-xl m-auto hover:bg-zinc-800 hover:text-zinc-100 transition-colors font-medium"
                   >
-                    About Me
+                    About
                   </a>
                 </li>
                 <li>
