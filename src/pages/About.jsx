@@ -67,8 +67,8 @@ const About = () => {
           <div className="">
               <section className='bg-amber-600 p-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8'>
                 <SplitText
-                  text="About Me"
-                  className="text-4xl md:text-5xl font-bold text-zinc-100 mb-4"
+                  text="Skills & Technologies"
+                  className="text-xl md:text-4xl font-bold text-zinc-100 mb-4"
                   delay={50}
                   duration={1.25}
                   ease="power3.out"
