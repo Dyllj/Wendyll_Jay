@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <button> Click me!
+      <button> About Me
       </button>
     </StyledWrapper>
   );
@@ -12,7 +12,7 @@ const Button = () => {
 
 const StyledWrapper = styled.div`
   button {
-   padding: 15px 25px;
+   padding: 10px 20px;
    border: unset;
    border-radius: 15px;
    color: #212121;

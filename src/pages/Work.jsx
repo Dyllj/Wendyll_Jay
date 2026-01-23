@@ -90,11 +90,12 @@ const Works = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="works" className="w-full bg-zinc-800 py-16 mt-10">
+    <section id="works" className="w-full bg-zinc-800 py-16 mt-5">
+      <ScrollFadeIn>
       <div className="w-full px-4 sm:px-6 lg:px-8 mt-30">
         <div className="flex gap-12  items-start">
           {/* Left: Title */}
-          <div className="w-64 shrink-0">
+          <div className="w-64 shrink-0 ml-5">
             <SplitText
               text="My Works"
               className="text-4xl md:text-5xl font-bold text-zinc-200"
@@ -125,7 +126,7 @@ const Works = () => {
           {/* Right: Project Cards Grid */}
           <div className="flex-1 -mt-15">
             <ScrollFadeIn key={selectedCategory}>
-              <div className="grid grid-cols-3 -ml-20 gap-x-45 gap-y-10">
+              <div className="grid grid-cols-3 -ml-20 gap-y-10">
                 {filteredProjects.map((project) => (
                   <ProjectCard
                     key={project.id}
@@ -142,6 +143,7 @@ const Works = () => {
           </div>
         </div>
       </div>
+      </ScrollFadeIn>
     </section>
   );
 };

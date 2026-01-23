@@ -37,7 +37,7 @@ const About = () => {
     <ScrollFadeIn>
       <section id="about" className="w-full bg-zinc-800 py-16 -mt-22">
         {/* About Me Section - Full Width */}
-        <div className="-mt-16 relative z-10 w-full bg-zinc-900 py-16">
+        <div className="-mt-16 relative z-10 w-full bg-zinc-900 py-16 ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="w-full flex gap-10 mb-16">
               <div className="flex-1">
@@ -96,38 +96,26 @@ const About = () => {
         </div>
 
         {/* Skills & Technologies Section */}
-        <div className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full">
-            <div className="text-center mb-12">
-              <SplitText
-                text="Skills & Technologies"
-                className="text-3xl md:text-4xl font-bold text-zinc-200"
-                delay={50}
-                duration={1.25}
-                ease="power3.out"
-                splitType="chars"
-                from={{ opacity: 0, y: 40 }}
-                to={{ opacity: 1, y: 0 }}
-                threshold={0.1}
-                rootMargin="-100px"
-                textAlign="center"
-                tag="h2"
-              />
+        <div className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 ">
+          <ScrollFadeIn>
+            <div className="w-full">
+              <div className="text-center mb-12">
+                <h1 className="text-3xl md:text-4xl font-bold text-zinc-200">Skills & Technologies</h1>
+              </div>
+              
+
+              <div className="flex flex-wrap justify-center gap-24 pb-15">
+                {skillsData.map((skillCard, index) => (
+                  <SkillCard
+                    key={index}
+                    title={skillCard.title}
+                    skills={skillCard.skills}
+                    icon={skillCard.icon}
+                  />
+                ))}
+              </div>
             </div>
-            
-            <ScrollFadeIn>
-            <div className="flex flex-wrap justify-center gap-24">
-              {skillsData.map((skillCard, index) => (
-                <SkillCard
-                  key={index}
-                  title={skillCard.title}
-                  skills={skillCard.skills}
-                  icon={skillCard.icon}
-                />
-              ))}
-            </div>
-            </ScrollFadeIn>
-          </div>
+          </ScrollFadeIn>
         </div>
       </section>
     </ScrollFadeIn>

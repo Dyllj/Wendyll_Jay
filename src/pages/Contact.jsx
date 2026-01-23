@@ -72,7 +72,7 @@ const Contact = () => {
   return (
     <section id="contact" className="relative w-full">
       {/* First Article - Floating Contact Form */}
-      <article className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 mt-40">
+      <article className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 mt-20 border-t-2 border-zinc-700 pt-5">
         <ScrollFadeIn>
           <div className="flex gap-20 justify-center items-center flex-col md:flex-row">
             <div className="flex flex-col justify-center max-w-xl">
@@ -168,12 +168,12 @@ const Contact = () => {
       </article>
 
       {/* Second Article - Footer (Full Width - No Gaps) */}
-      <footer className="relative z-10 w-full bg-zinc-900 pt-32 pb-0">
+      <footer className="relative z-10 w-full bg-amber-700 pt-32 pb-0 -mb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {/* Left: Contact Info */}
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold text-zinc-200 mb-4">
+              <h3 className="text-2xl font-bold text-zinc-900 mb-4">
                 Contact me via
               </h3>
               <div className="flex gap-4 justify-center md:justify-start">
@@ -202,20 +202,20 @@ const Contact = () => {
 
             {/* Right: Additional Info */}
             <div className="text-center md:text-right">
-              <p className="text-zinc-400 mb-2">
+              <p className="text-zinc-900 mb-2 font-bold">
                 <a href="mailto:wendylljay@gmail.com" className="hover:text-amber-600 transition-colors">
                   wendylljay@gmail.com
                 </a>
               </p>
-              <p className="text-zinc-400">
-                Quezon City, Philippines
+              <p className="text-zinc-900 font-bold">
+                Guripan, Mahayag, Zamboanga Del Sur, Philippines
               </p>
             </div>
           </div>
 
           {/* Copyright */}
-          <div className="mt-12 pt-8 border-t border-zinc-800 text-center pb-8">
-            <p className="text-zinc-500 text-sm">
+          <div className="mt-12 pt-8  border-t-3 border-zinc-800 text-center pb-8">
+            <p className="text-zinc-900 text-sm font-bold">
               © 2025 Wendyll Jay Tautoan. All rights reserved.
             </p>
           </div>

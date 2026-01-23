@@ -3,13 +3,13 @@ import About from './pages/About'
 import Works from './pages/Work'
 import Contact from './pages/Contact'
 import SplitText from './components/SplitText/Split_Text'
-import Button from './components/AnimationHover/Animation_Hover'
+import Button from './components/Button/Button'
 import ScrollFadeIn from './components/ScrollFadeIn/Scroll_FadeIn'
 import myself from './assets/myself.png';
 
 function App() {
   return (
-    <div className="min-h-screen bg-amber-800">
+    <div className="min-h-screen bg-zinc-800">
       <header className="bg-zinc-200 shadow-lg fixed w-full top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -59,6 +59,7 @@ function App() {
       
       {/* Hero Section */}
       <article className="bg-linear-to-b from-zinc-200 to-zinc-800 min-h-screen flex items-center">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <figure className="shrink-0">
