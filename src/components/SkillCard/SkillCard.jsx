@@ -7,12 +7,12 @@ const SkillCard = ({ title, skills, icon: Icon }) => {
         {Icon && <Icon className="text-5xl text-zinc-500" />}
       </div>
       <div>
-        <h2 className="text-2xl font-extrabold mb-6 text-gray-800">{title}</h2>
+        <h2 className="text-2xl font-Strait font-extrabold mb-6 text-gray-800">{title}</h2>
         <div className="grid grid-cols-4 gap-3">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="text-sm font-bold text-gray-700 bg-zinc-200 px-2 py-1 rounded-lg hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer flex items-center justify-center"
+              className="text-sm font-Strait font-bold text-gray-700 bg-zinc-200 px-2 py-1 rounded-lg hover:bg-zinc-800 hover:text-zinc-200 transition-all ease-in-out cursor-pointer flex items-center justify-center"
             >
               {skill}
             </div>

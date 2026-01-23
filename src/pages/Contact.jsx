@@ -76,10 +76,10 @@ const Contact = () => {
         <ScrollFadeIn>
           <div className="flex gap-20 justify-center items-center flex-col md:flex-row">
             <div className="flex flex-col justify-center max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-zinc-300">
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-2 text-zinc-300">
                 Get in <span className="text-amber-600">Touch</span>
               </h2>
-              <p className="text-zinc-400 text-xl mb-8">
+              <p className="text-zinc-400 font-Strait font-bold text-xl mb-8 ml-2">
                 Have a question or want to work together? Send me a message!
               </p>
             </div>
@@ -87,7 +87,7 @@ const Contact = () => {
               <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col">
-                  <label htmlFor="firstName" className="mb-2 font-semibold text-zinc-700">
+                  <label htmlFor="firstName" className="mb-2 font-Strait font-semibold text-zinc-700">
                     First Name
                   </label>
                   <input
@@ -95,13 +95,13 @@ const Contact = () => {
                     type="text"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="h-10 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
+                    className="h-10 px-4 border-2 font-Strait border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
                     required
                   />
                 </div>
 
                 <div className="flex flex-col">
-                  <label htmlFor="lastName" className="mb-2 font-semibold text-zinc-700">
+                  <label htmlFor="lastName" className="mb-2 font-Strait font-semibold text-zinc-700">
                     Last Name
                   </label>
                   <input
@@ -109,14 +109,14 @@ const Contact = () => {
                     type="text"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="h-10 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
+                    className="h-10 px-4 border-2 font-Strait border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
                     required
                   />
                 </div>
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="email" className="mb-2 font-semibold text-zinc-700">
+                <label htmlFor="email" className="mb-2 font-Strait font-semibold text-zinc-700">
                   Email
                 </label>
                 <input
@@ -124,13 +124,13 @@ const Contact = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="h-10 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
+                  className="h-10 px-4 border-2 font-Strait border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
                   required
                 />
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="message" className="mb-2 font-semibold text-zinc-700">
+                <label htmlFor="message" className="mb-2  font-Strait font-semibold text-zinc-700">
                   Message
                 </label>
                 <textarea
@@ -138,7 +138,7 @@ const Contact = () => {
                   rows="5"
                   value={formData.message}
                   onChange={handleChange}
-                  className="px-4 py-3 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 resize-none transition-colors"
+                  className="px-4 py-3 border-2 font-Strait border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 resize-none transition-colors"
                   required
                 />
               </div>
@@ -157,7 +157,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={status.loading}
-                className="w-full h-12 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full h-12 font-Strait bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status.loading ? "Sending..." : "Send Message"}
               </button>
@@ -173,7 +173,7 @@ const Contact = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {/* Left: Contact Info */}
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold text-zinc-900 mb-4">
+              <h3 className="text-3xl font-Strait font-bold text-zinc-900 mb-4">
                 Contact me via
               </h3>
               <div className="flex gap-4 justify-center md:justify-start">
@@ -187,27 +187,17 @@ const Contact = () => {
                   href="https://www.instagram.com/wendylljay/"
                   ariaLabel="Instagram profile"
                 />
-                <IconLabel
-                  icon={FaGithub}
-                  href="https://github.com/Dyllj"
-                  ariaLabel="GitHub profile"
-                />
-                <IconLabel
-                  icon={FaLinkedin}
-                  href="https://linkedin.com"
-                  ariaLabel="LinkedIn profile"
-                />
               </div>
             </div>
 
             {/* Right: Additional Info */}
             <div className="text-center md:text-right">
-              <p className="text-zinc-900 mb-2 font-bold">
-                <a href="mailto:wendylljay@gmail.com" className="hover:text-amber-600 transition-colors">
-                  wendylljay@gmail.com
+              <p className="text-zinc-900 mb-2 text-md font-Strait font-bold">
+                <a href="mailto:tautoanwendylljay@gmail.com" className="hover:text-zinc-300 transition-colors">
+                  tautoanwendylljay@gmail.com
                 </a>
               </p>
-              <p className="text-zinc-900 font-bold">
+              <p className="text-zinc-900 text-md font-Strait font-bold">
                 Guripan, Mahayag, Zamboanga Del Sur, Philippines
               </p>
             </div>
@@ -215,7 +205,7 @@ const Contact = () => {
 
           {/* Copyright */}
           <div className="mt-12 pt-8  border-t-3 border-zinc-800 text-center pb-8">
-            <p className="text-zinc-900 text-sm font-bold">
+            <p className="text-zinc-900 text-md font-Strait font-bold">
               © 2025 Wendyll Jay Tautoan. All rights reserved.
             </p>
           </div>

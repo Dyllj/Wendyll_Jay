@@ -110,7 +110,7 @@ const Works = () => {
               textAlign="left"
               tag="h2"
             />
-            <p className="text-zinc-400 text-md mt-4 leading-relaxed">
+            <p className="text-zinc-300 text-lg mt-4 leading-relaxed font-Strait font-bold">
             Explore my recent projects showcasing my expertise in web development, IoT systems, and innovative solutions.
           </p>
           </div>

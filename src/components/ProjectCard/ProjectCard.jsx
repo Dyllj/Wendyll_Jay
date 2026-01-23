@@ -28,8 +28,8 @@ const ProjectCard = ({ title, description, image, techStack, links, category }) 
       {/* Second Content - Details */}
       <div className="absolute top-0 left-0 w-full h-0 opacity-0 flex justify-center items-center bg-black/90 rounded-2xl transition-all duration-500 group-hover:h-full group-hover:opacity-100">
         <div className="p-4 flex flex-col gap-3 w-full overflow-y-auto">
-          <h3 className="text-white font-bold text-lg m-0">{title}</h3>
-          <p className="text-gray-300 text-sm m-0 leading-relaxed">{description}</p>
+          <h3 className="text-white font-Strait font-bold text-lg m-0">{title}</h3>
+          <p className="text-gray-300 font-Strait text-sm m-0 leading-relaxed">{description}</p>
           <TechStack technologies={techStack} />
           
           <div className="flex gap-3 mt-2">

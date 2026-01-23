@@ -49,7 +49,7 @@ const About = () => {
                   />
                   <SplitText
                     text="About Me"
-                    className="text-4xl md:text-5xl font-bold text-amber-600"
+                    className="text-4xl md:text-5xl font-extrabold text-amber-600"
                     delay={50}
                     duration={1.25}
                     ease="power3.out"
@@ -62,31 +62,31 @@ const About = () => {
                     tag="h2"
                   />
                 </div>
-                <p className="text-zinc-300 leading-relaxed text-lg ml-36">
+                <p className="font-Strait font-bold text-zinc-300 leading-relaxed text-lg ml-36">
                   I'm a software developer focused on creating intuitive and engaging user experiences. 
                   My work spans web development, where I design clean, responsive interfaces, to IoT 
                   projects like automated water-level monitors and smart dashboards that connect software 
                   with real-world applications.
                 </p>
-                <p className="text-zinc-300 leading-relaxed text-lg mt-4 ml-36">
+                <p className="font-Strait font-bold text-zinc-300 leading-relaxed text-lg mt-4 ml-36">
                   I enjoy collaborating on projects that thrive on teamwork and creative problem-solving, 
                   delivering practical, maintainable solutions that make a meaningful impact.
                 </p>
               </div>
               
               <aside className="mt-25 ml-15 p-5 rounded-lg w-full max-w-sm h-fit border-2 border-zinc-700 bg-zinc-800 shadow-lg shadow-amber-600/20">
-                <h3 className="text-2xl font-semibold mb-4 text-amber-600">Key Facts</h3>
+                <h3 className="text-2xl font-Strait font-semibold mb-4 text-amber-600">Key Facts</h3>
                 <ul className="space-y-3">
-                  <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-45 p-2 rounded-xl hover:bg-zinc-800 hover:border-amber-600 hover:text-zinc-200  transition-all ease-in-out cursor-pointer">
+                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-45 p-2 rounded-xl hover:bg-zinc-800 hover:border-amber-600 hover:text-zinc-200  transition-all ease-in-out cursor-pointer">
                     IOT Development
                   </li>
-                  <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer">
+                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer">
                     UI/UX Design
                   </li>
-                  <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer">
+                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer">
                     Front-end Development
                   </li>
-                  <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600  transition-all ease-in-out cursor-pointer">
+                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600  transition-all ease-in-out cursor-pointer">
                     Full-Stack Developer
                   </li>
                 </ul>
@@ -96,11 +96,11 @@ const About = () => {
         </div>
 
         {/* Skills & Technologies Section */}
-        <div className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="max-w-7xl mt-5 mx-auto px-4 sm:px-6 lg:px-8 ">
           <ScrollFadeIn>
             <div className="w-full">
               <div className="text-center mb-12">
-                <h1 className="text-3xl md:text-4xl font-bold text-zinc-200">Skills & Technologies</h1>
+                <h1 className="text-4xl md:text-5xl font-Strait font-bold text-zinc-200">Skills & Technologies</h1>
               </div>
               
 

@@ -6,6 +6,8 @@ import SplitText from './components/SplitText/Split_Text'
 import Button from './components/Button/Button'
 import ScrollFadeIn from './components/ScrollFadeIn/Scroll_FadeIn'
 import myself from './assets/myself.png';
+import { HiUser, HiBriefcase, HiMail } from 'react-icons/hi';
+import Nav from './components/Navs/Nav'
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="text-2xl font-bold text-zinc-800 cursor-pointer hover:text-zinc-600 transition-colors tracking-widest"
+                className="text-3xl font-Josefin-Sans ml-25 text-zinc-800 cursor-pointer hover:text-zinc-600 transition-colors tracking-widest"
               >
                 DYLL J
               </a>
@@ -28,28 +30,13 @@ function App() {
             <nav aria-label="Main navigation">
               <ul className="flex gap-15">
                 <li>
-                  <a 
-                    href="#about" 
-                    className="text-zinc-800 p-2 rounded-xl m-auto hover:bg-zinc-800 hover:text-zinc-100 transition-colors font-medium"
-                  >
-                    About
-                  </a>
+                  <Nav href="#about" icon={HiUser}>About</Nav>
                 </li>
                 <li>
-                  <a 
-                    href="#works" 
-                    className="text-zinc-800 p-2 rounded-xl m-auto hover:bg-zinc-800 hover:text-zinc-100 transition-colors font-medium"
-                  >
-                    Works
-                  </a>
+                  <Nav href="#works" icon={HiBriefcase}>Works</Nav>
                 </li>
                 <li>
-                  <a 
-                    href="#contact" 
-                    className="text-zinc-800 p-2 rounded-xl m-auto hover:bg-zinc-800 hover:text-zinc-100 transition-colors font-medium"
-                  >
-                    Contact
-                  </a>
+                  <Nav href="#contact" icon={HiMail}>Contact</Nav>
                 </li>
               </ul>
             </nav>
@@ -74,7 +61,7 @@ function App() {
             <div className="flex-1 text-center md:text-left">
               <SplitText
                 text="HELLO I AM WENDYLL JAY TAUTOAN"
-                className="text-4xl md:text-5xl font-bold text-zinc-900 -mb-2"
+                className="text-4xl md:text-6xl font-bold font-Strait text-zinc-900 -mb-2"
                 delay={50}
                 duration={1.25}
                 ease="power3.out"
@@ -87,10 +74,10 @@ function App() {
                 tag="h1"
               />
               <ScrollFadeIn>
-              <p className="text-xl font-bold text-zinc-800">
+              <p className="text-xl font-Strait font-bold text-zinc-800">
                 A developer with a passion for creating innovative and efficient solutions through code. 
               </p>
-              <p className="text-xl font-bold text-zinc-800 mb-6">
+              <p className="text-xl font-Strait font-bold text-zinc-800 mb-6">
                 Get to know me more!
               </p>
               <a href="#about">
