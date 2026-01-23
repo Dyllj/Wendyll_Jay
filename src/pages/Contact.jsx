@@ -168,7 +168,7 @@ const Contact = () => {
       </article>
 
       {/* Second Article - Footer (Full Width - No Gaps) */}
-      <footer className="relative z-10 w-screen bg-zinc-900 pt-32 pb-8 -ml-[50vw] left-[50%]">
+      <footer className="relative z-10 w-full bg-zinc-900 pt-32 pb-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {/* Left: Contact Info */}
@@ -214,7 +214,7 @@ const Contact = () => {
           </div>
 
           {/* Copyright */}
-          <div className="mt-12 pt-8 border-t border-zinc-800 text-center">
+          <div className="mt-12 pt-8 border-t border-zinc-800 text-center pb-8">
             <p className="text-zinc-500 text-sm">
               © 2025 Wendyll Jay Tautoan. All rights reserved.
             </p>

@@ -11,7 +11,7 @@ const About = () => {
       skills: ["JavaScript","Python", "HTML", "CSS"],
       icon: FaCode
     },
-        {
+    {
       title: "Frameworks & Libraries",
       skills: ["React", "Node.js", "Flask", "Bootstrap", "Tailwind"],
       icon: FaBox
@@ -37,7 +37,7 @@ const About = () => {
     <ScrollFadeIn>
       <section id="about" className="w-full bg-zinc-800 py-16 -mt-22">
         {/* About Me Section - Full Width */}
-        <div className=" -mt-16 relative z-10 w-screen bg-zinc-900 py-16 -ml-[50vw] left-[50%]">
+        <div className="-mt-16 relative z-10 w-full bg-zinc-900 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="w-full flex gap-10 mb-16">
               <div className="flex-1">
