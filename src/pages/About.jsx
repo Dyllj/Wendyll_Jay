@@ -111,6 +111,7 @@ const About = () => {
               />
             </div>
             
+            <ScrollFadeIn>
             <div className="flex flex-wrap justify-center gap-24">
               {skillsData.map((skillCard, index) => (
                 <SkillCard
@@ -121,6 +122,7 @@ const About = () => {
                 />
               ))}
             </div>
+            </ScrollFadeIn>
           </div>
         </div>
       </section>
