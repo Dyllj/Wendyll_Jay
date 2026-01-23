@@ -168,8 +168,8 @@ const Contact = () => {
       </article>
 
       {/* Second Article - Footer (Full Width - No Gaps) */}
-      <footer className="relative z-10 w-full bg-amber-700 pt-32 pb-0 -mb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="relative z-10 w-full bg-amber-700 pt-20 h-80 -mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {/* Left: Contact Info */}
             <div className="text-center md:text-left">

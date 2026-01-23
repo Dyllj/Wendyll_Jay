@@ -37,7 +37,7 @@ const About = () => {
     <ScrollFadeIn>
       <section id="about" className="w-full bg-zinc-800 py-16 -mt-22">
         {/* About Me Section - Full Width */}
-        <div className="-mt-16 relative z-10 w-full bg-zinc-900 py-16 ">
+        <div className="-mt-16 relative z-10 w-full bg-linear-to-b from-zinc-900 to-zinc-800 py-16 ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="w-full flex gap-10 mb-16">
               <div className="flex-1">
@@ -49,7 +49,7 @@ const About = () => {
                   />
                   <SplitText
                     text="About Me"
-                    className="text-4xl md:text-5xl font-bold text-zinc-200"
+                    className="text-4xl md:text-5xl font-bold text-amber-600"
                     delay={50}
                     duration={1.25}
                     ease="power3.out"
@@ -74,8 +74,8 @@ const About = () => {
                 </p>
               </div>
               
-              <aside className="mt-25 ml-15 p-5 rounded-lg w-full max-w-sm h-fit">
-                <h3 className="text-2xl font-semibold mb-4 text-zinc-200">Key Facts</h3>
+              <aside className="mt-25 ml-15 p-5 rounded-lg w-full max-w-sm h-fit border-2 border-zinc-700 bg-zinc-800 shadow-lg shadow-amber-600/20">
+                <h3 className="text-2xl font-semibold mb-4 text-amber-600">Key Facts</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-45 p-2 rounded-xl hover:bg-zinc-800 hover:border-amber-600 hover:text-zinc-200  transition-all ease-in-out cursor-pointer">
                     IOT Development

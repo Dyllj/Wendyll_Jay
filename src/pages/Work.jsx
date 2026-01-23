@@ -92,8 +92,8 @@ const Works = () => {
   return (
     <section id="works" className="w-full bg-zinc-800 py-16 mt-5">
       <ScrollFadeIn>
-      <div className="w-full px-4 sm:px-6 lg:px-8 mt-30">
-        <div className="flex gap-12  items-start">
+      <div className="w-full px-4 sm:px-6 lg:px-8 mt-5 bg-linear-to-b from-zinc-800 via-amber-700 to-zinc-800 py-10 h-180 ">
+        <div className="flex gap-12 items-start">
           {/* Left: Title */}
           <div className="w-64 shrink-0 ml-5">
             <SplitText
@@ -116,7 +116,7 @@ const Works = () => {
           </div>
 
           {/* Middle: Radio Buttons */}
-          <div className="w-48 mt-6 shrink-0">
+          <div className="w-48 mt-5 shrink-0">
             <RadioButtons 
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}

@@ -59,7 +59,6 @@ function App() {
       
       {/* Hero Section */}
       <article className="bg-linear-to-b from-zinc-200 to-zinc-800 min-h-screen flex items-center">
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <figure className="shrink-0">
@@ -75,7 +74,7 @@ function App() {
             <div className="flex-1 text-center md:text-left">
               <SplitText
                 text="HELLO I AM WENDYLL JAY TAUTOAN"
-                className="text-4xl md:text-5xl font-bold text-zinc-900 mb-4"
+                className="text-4xl md:text-5xl font-bold text-zinc-900 -mb-2"
                 delay={50}
                 duration={1.25}
                 ease="power3.out"
