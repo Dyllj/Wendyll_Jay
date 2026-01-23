@@ -90,7 +90,7 @@ const Works = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="works" className="w-full bg-zinc-800 py-16 mt-30">
+    <section id="works" className="w-full bg-zinc-800 py-16 mt-10">
       <div className="w-full px-4 sm:px-6 lg:px-8 mt-30">
         <div className="flex gap-12  items-start">
           {/* Left: Title */}

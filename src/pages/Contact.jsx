@@ -70,22 +70,22 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative w-full mt-50">
+    <section id="contact" className="relative w-full">
       {/* First Article - Floating Contact Form */}
-      <article className="mt-40 relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+      <article className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 mt-40">
         <ScrollFadeIn>
-        <div className="flex gap-20 w-300 -ml-30 justify-center items-center rounded-3xl flex-col md:flex-row">
-          <div className="flex flex-col justify-center max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-zinc-300">
-              Get in <span className="text-amber-600">Touch</span>
-            </h2>
-            <p className="text-zinc-400 text-xl mb-8">
-              Have a question or want to work together? Send me a message!
-            </p>
-          </div>
-          <div className="w-xl bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-            <form className="space-y-3" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="flex gap-20 justify-center items-center flex-col md:flex-row">
+            <div className="flex flex-col justify-center max-w-xl">
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-zinc-300">
+                Get in <span className="text-amber-600">Touch</span>
+              </h2>
+              <p className="text-zinc-400 text-xl mb-8">
+                Have a question or want to work together? Send me a message!
+              </p>
+            </div>
+            <div className="w-full max-w-xl bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+              <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col">
                   <label htmlFor="firstName" className="mb-2 font-semibold text-zinc-700">
                     First Name
@@ -95,7 +95,7 @@ const Contact = () => {
                     type="text"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="h-9 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
+                    className="h-10 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
                     required
                   />
                 </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                     type="text"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="h-9 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
+                    className="h-10 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
                     required
                   />
                 </div>
@@ -124,7 +124,7 @@ const Contact = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="h-9 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
+                  className="h-10 px-4 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 transition-colors"
                   required
                 />
               </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
-                  rows="6"
+                  rows="5"
                   value={formData.message}
                   onChange={handleChange}
                   className="px-4 py-3 border-2 border-zinc-300 rounded-lg focus:outline-none focus:border-amber-600 resize-none transition-colors"
@@ -163,12 +163,12 @@ const Contact = () => {
               </button>
             </form>
           </div>
-         </div> 
+        </div>
         </ScrollFadeIn>
       </article>
 
-      {/* Second Article - Footer (Full Width) */}
-      <article className="relative z-10 m-0 bg-zinc-900 pt-32 pb-12">
+      {/* Second Article - Footer (Full Width - No Gaps) */}
+      <footer className="relative z-10 w-screen bg-zinc-900 pt-32 pb-8 -ml-[50vw] left-[50%]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {/* Left: Contact Info */}
@@ -220,9 +220,9 @@ const Contact = () => {
             </p>
           </div>
         </div>
-      </article>
+      </footer>
     </section>
   );
 };
 
-export default Contact
+export default Contact;

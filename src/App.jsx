@@ -9,7 +9,7 @@ import myself from './assets/myself.png';
 
 function App() {
   return (
-    <div className="min-h-screen bg-zinc-800">
+    <div className="min-h-screen bg-amber-800">
       <header className="bg-zinc-200 shadow-lg fixed w-full top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -102,7 +102,7 @@ function App() {
         </div>
       </article>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-12">
         <About />
         <Works />
         <Contact />
