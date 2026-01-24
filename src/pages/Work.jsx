@@ -91,7 +91,7 @@ const Works = () => {
   return (
     <section id="works" className="w-full bg-zinc-800 py-8 sm:py-16 mt-5">
       <ScrollFadeIn>
-      <div className="w-full px-4 sm:px-6 lg:px-8 mt-5 bg-linear-to-b from-zinc-800 via-amber-700 to-zinc-800 py-6 sm:py-10 min-h-[600px] sm:h-180">
+      <div className="w-full px-4 sm:px-6 lg:px-8 mt-5 bg-linear-to-b from-zinc-800 via-amber-700 to-zinc-800 py-6 sm:py-10 min-h-150 sm:h-180">
         <div className="flex flex-col lg:flex-row gap-6 sm:gap-12 items-start">
           {/* Left: Title */}
           <div className="w-full lg:w-64 lg:shrink-0 lg:ml-5">
