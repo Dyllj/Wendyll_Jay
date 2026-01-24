@@ -103,7 +103,7 @@ const About = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-Strait font-bold text-zinc-200">Skills & Technologies</h1>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-8 sm:gap-12 lg:gap-24 pb-8 sm:pb-15 md:w-full sm:w-xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-15 sm:gap-12 lg:gap-24 pb-8 sm:pb-15">
                 {skillsData.map((skillCard, index) => (
                   <SkillCard
                     key={index}
