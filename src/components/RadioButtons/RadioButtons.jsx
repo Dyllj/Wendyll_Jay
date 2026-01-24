@@ -19,11 +19,11 @@ const RadioButtons = ({ selectedCategory, onCategoryChange }) => {
   };
 
   return (
-    <div className="flex flex-col gap-1 w-30">
+    <div className="flex flex-row sm:flex-col gap-3 sm:gap-1 w-full sm:w-30 justify-center sm:justify-start">
       {categories.map((category) => (
         <label
           key={category.value}
-          className="flex items-center rounded-full px-1 py-1 cursor-pointer transition-all duration-300 hover:bg-white/10"
+          className="flex items-center rounded-full px-2 sm:px-1 py-1 cursor-pointer transition-all duration-300 hover:bg-white/10"
         >
           <input
             type="radio"
@@ -34,7 +34,7 @@ const RadioButtons = ({ selectedCategory, onCategoryChange }) => {
             className="absolute opacity-0 w-0 h-0"
           />
           <div
-            className="w-4 h-4 rounded-full relative"
+            className="w-3 h-3 sm:w-4 sm:h-4 rounded-full relative shrink-0"
             style={{ background: getGradientColor(category.color) }}
           >
             <div
@@ -44,7 +44,7 @@ const RadioButtons = ({ selectedCategory, onCategoryChange }) => {
             />
           </div>
           <span
-            className={`ml-2 text-sm font-bold tracking-wider uppercase transition-colors duration-300 ${
+            className={`ml-2 text-xs sm:text-sm font-bold tracking-wider uppercase transition-colors duration-300 ${
               selectedCategory === category.value ? 'text-zinc-200' : 'text-zinc-400'
             }`}
           >

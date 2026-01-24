@@ -72,7 +72,7 @@ const Works = () => {
       category: "Featured"
     },
     {
-      id: 5,
+      id: 6,
       title: "Mobile App Portfolio",
       description: "A mobile app portfolio with basic navigation panel",
       image: projectApp,
@@ -82,7 +82,6 @@ const Works = () => {
       },
       category: "Personal"
     },
-    
   ];
 
   const filteredProjects = selectedCategory === 'All' 
@@ -90,15 +89,15 @@ const Works = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="works" className="w-full bg-zinc-800 py-16 mt-5">
+    <section id="works" className="w-full bg-zinc-800 py-8 sm:py-16 mt-5">
       <ScrollFadeIn>
-      <div className="w-full px-4 sm:px-6 lg:px-8 mt-5 bg-linear-to-b from-zinc-800 via-amber-700 to-zinc-800 py-10 h-180 ">
-        <div className="flex gap-12 items-start">
+      <div className="w-full px-4 sm:px-6 lg:px-8 mt-5 bg-linear-to-b from-zinc-800 via-amber-700 to-zinc-800 py-6 sm:py-10 min-h-[600px] sm:h-180">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-12 items-start">
           {/* Left: Title */}
-          <div className="w-64 shrink-0 ml-5">
+          <div className="w-full lg:w-64 lg:shrink-0 lg:ml-5">
             <SplitText
               text="My Works"
-              className="text-4xl md:text-5xl font-bold text-zinc-200"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-200"
               delay={50}
               duration={1.25}
               ease="power3.out"
@@ -110,13 +109,13 @@ const Works = () => {
               textAlign="left"
               tag="h2"
             />
-            <p className="text-zinc-300 text-lg mt-4 leading-relaxed font-Strait font-bold">
-            Explore my recent projects showcasing my expertise in web development, IoT systems, and innovative solutions.
-          </p>
+            <p className="text-zinc-300 text-sm sm:text-lg mt-3 sm:mt-4 leading-relaxed font-Strait font-bold">
+              Explore my recent projects showcasing my expertise in web development, IoT systems, and innovative solutions.
+            </p>
           </div>
 
           {/* Middle: Radio Buttons */}
-          <div className="w-48 mt-5 shrink-0">
+          <div className="w-full sm:w-48 lg:mt-5 lg:shrink-0">
             <RadioButtons 
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}
@@ -124,9 +123,9 @@ const Works = () => {
           </div>
 
           {/* Right: Project Cards Grid */}
-          <div className="flex-1 -mt-15">
+          <div className="flex-1 w-full lg:-mt-15">
             <ScrollFadeIn key={selectedCategory}>
-              <div className="grid grid-cols-3 -ml-20 gap-y-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:-ml-20 gap-6 sm:gap-8 lg:gap-y-10">
                 {filteredProjects.map((project) => (
                   <ProjectCard
                     key={project.id}

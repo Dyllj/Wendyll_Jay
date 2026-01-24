@@ -3,13 +3,8 @@
 
 @theme {
   --font-Boldonse:'Boldonse', 'system-ui'
-  font-weight: 400;
-  font-style: normal;
 }
 
 @theme {
   --font-inter:'Josefin Sans', 'sans-serif'
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
 }

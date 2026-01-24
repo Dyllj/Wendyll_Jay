@@ -17,7 +17,7 @@ const ProjectCard = ({ title, description, image, techStack, links, category }) 
 
   return (
     <div
-      className="group relative w-60 h-80 rounded-lg shadow-2xl transition-all duration-500 cursor-pointer hover:scale-110 hover:rounded-2xl overflow-hidden"
+      className="group relative w-full sm:w-60 h-64 sm:h-80 rounded-lg shadow-2xl transition-all duration-500 cursor-pointer hover:scale-105 sm:hover:scale-110 hover:rounded-2xl overflow-hidden mx-auto"
       style={{ backgroundColor: getCategoryColor() }}
     >
       {/* First Content - Image */}
@@ -27,12 +27,12 @@ const ProjectCard = ({ title, description, image, techStack, links, category }) 
 
       {/* Second Content - Details */}
       <div className="absolute top-0 left-0 w-full h-0 opacity-0 flex justify-center items-center bg-black/90 rounded-2xl transition-all duration-500 group-hover:h-full group-hover:opacity-100">
-        <div className="p-4 flex flex-col gap-3 w-full overflow-y-auto">
-          <h3 className="text-white font-Strait font-bold text-lg m-0">{title}</h3>
-          <p className="text-gray-300 font-Strait text-sm m-0 leading-relaxed">{description}</p>
+        <div className="p-3 sm:p-4 flex flex-col gap-2 sm:gap-3 w-full overflow-y-auto">
+          <h3 className="text-white font-Strait font-bold text-base sm:text-lg m-0">{title}</h3>
+          <p className="text-gray-300 font-Strait text-xs sm:text-sm m-0 leading-relaxed">{description}</p>
           <TechStack technologies={techStack} />
           
-          <div className="flex gap-3 mt-2">
+          <div className="flex gap-2 sm:gap-3 mt-2">
             {links.github && (
               <IconLabel icon={FaGithub} href={links.github} ariaLabel="GitHub" />
             )}
