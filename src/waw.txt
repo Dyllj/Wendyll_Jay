@@ -1,5 +1,0 @@
-<Nav href="#about" icon={HiUser}>About</Nav>
-<Nav href="#works" icon={HiBriefcase}>Works</Nav>
-<Nav href="#contact" icon={HiMail}>Contact</Nav>
-
-import { HiUser, HiBriefcase, HiMail } from 'react-icons/hi';

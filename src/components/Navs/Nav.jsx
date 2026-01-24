@@ -1,16 +1,18 @@
 import React from 'react';
 
-const Nav = ({ children = "Follow me", icon: Icon, href = "#" }) => {
+const Nav = ({ children = "Follow me", icon: Icon, href = "#", onClick }) => {
   return (
-    <a href={href}>
-      <button className="relative w-20 sm:w-28 h-8 sm:h-9 transition-all duration-500 text-xs sm:text-base rounded-md overflow-hidden group bg-zinc-200">
-        <p className="absolute font-Strait text-sm sm:text-lg font-bold top-0.5 left-5 sm:left-7 m-0 p-0 transition-all duration-500 text-zinc-800 group-hover:left-2 sm:group-hover:left-2.5 group-hover:text-amber-600">
-          {children}
-        </p>
-        {Icon && (
-          <Icon className="absolute top-1.5 sm:top-2 right-1.5 sm:right-2 opacity-0 transition-all duration-500 h-3 w-3 sm:h-4 sm:w-4 text-amber-600 group-hover:opacity-100" />
-        )}
-      </button>
+    <a 
+      href={href} 
+      onClick={onClick}
+      className="flex items-center gap-1 px-4 py-2 text-zinc-800 transition-all duration-300 font-Strait font-bold group relative overflow-hidden rounded-lg hover:text-amber-600"
+    >
+      <span className="relative z-10 transition-all duration-300 group-hover:translate-x-0.5">
+        {children}
+      </span>
+      {Icon && (
+        <Icon className="text-xl opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 transform -translate-x-1" />
+      )}
     </a>
   );
 };

@@ -61,36 +61,15 @@ function App() {
 
             {/* Desktop Navigation */}
             <nav aria-label="Main navigation" className="hidden md:block">
-              <ul className="flex gap-3 lg:gap-15">
+              <ul className="flex gap-3 lg:gap-10">
                 <li>
-                  <a 
-                    href="#about" 
-                    onClick={(e) => handleNavClick(e, 'about')}
-                    className="flex items-center gap-2 px-4 py-2 text-zinc-800 hover:text-amber-600 transition-colors font-Strait font-bold"
-                  >
-                    <HiUser className="text-xl" />
-                    About
-                  </a>
+                  <Nav href="#about" icon={HiUser} onClick={(e) => handleNavClick(e, 'about')}>About</Nav>
                 </li>
                 <li>
-                  <a 
-                    href="#works" 
-                    onClick={(e) => handleNavClick(e, 'works')}
-                    className="flex items-center gap-2 px-4 py-2 text-zinc-800 hover:text-amber-600 transition-colors font-Strait font-bold"
-                  >
-                    <HiBriefcase className="text-xl" />
-                    Works
-                  </a>
+                  <Nav href="#works" icon={HiBriefcase} onClick={(e) => handleNavClick(e, 'works')}>Works</Nav>
                 </li>
                 <li>
-                  <a 
-                    href="#contact" 
-                    onClick={(e) => handleNavClick(e, 'contact')}
-                    className="flex items-center gap-2 px-4 py-2 text-zinc-800 hover:text-amber-600 transition-colors font-Strait font-bold"
-                  >
-                    <HiMail className="text-xl" />
-                    Contact
-                  </a>
+                  <Nav href="#contact" icon={HiMail} onClick={(e) => handleNavClick(e, 'contact')}>Contact</Nav>
                 </li>
               </ul>
             </nav>
