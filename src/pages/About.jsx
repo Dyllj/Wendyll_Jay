@@ -49,7 +49,7 @@ const About = () => {
                   />
                   <SplitText
                     text="About Me"
-                    className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-600"
+                    className="text-3xl mt-8 sm:text-4xl md:text-5xl font-extrabold text-amber-600"
                     delay={50}
                     duration={1.25}
                     ease="power3.out"
