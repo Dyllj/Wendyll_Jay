@@ -3,7 +3,7 @@ import SplitText from '../components/SplitText/Split_Text';
 import RadioButtons from '../components/RadioButtons/RadioButtons';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
 import ScrollFadeIn from '../components/ScrollFadeIn/Scroll_FadeIn';
-import capstoneIOT from '../assets/capstoneIOT.png';
+import CapstoneIOT from '../assets/CapstoneIOT.png';
 import alertechWeb from '../assets/alertechWeb.png';
 import alertechMobile from '../assets/alertechMobile.png';
 import portfolio from '../assets/portfolio.png';
@@ -19,7 +19,7 @@ const Works = () => {
       id: 1,
       title: "Flood Monitoring System",
       description: "IoT-based real-time flood monitoring dashboard with automated alerts and water level tracking.",
-      image: capstoneIOT,
+      image: CapstoneIOT,
       techStack: ["NodeMCU", "React", "Firebase", "Sensors"],
       links: {
         github: "https://github.com/Dyllj/flood_monitoring_system",
