@@ -13,8 +13,34 @@ import Nav from './components/Navs/Nav'
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleNavClick = () => {
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
     setIsMenuOpen(false);
+    
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerHeight = 64; // Adjust this to match your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      // Update URL hash
+      window.history.pushState(null, '', `#${targetId}`);
+    }
+  };
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Remove hash from URL
+    window.history.pushState(null, '', window.location.pathname);
   };
 
   return (
@@ -26,10 +52,7 @@ function App() {
             <div className="text-xl sm:text-2xl font-bold text-zinc-800">
               <a 
                 href="#" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
+                onClick={handleLogoClick}
                 className="text-2xl sm:text-3xl font-Josefin-Sans text-zinc-800 cursor-pointer hover:text-zinc-600 transition-colors tracking-widest"
               >
                 DYLL J
@@ -40,13 +63,34 @@ function App() {
             <nav aria-label="Main navigation" className="hidden md:block">
               <ul className="flex gap-3 lg:gap-15">
                 <li>
-                  <Nav href="#about" icon={HiUser}>About</Nav>
+                  <a 
+                    href="#about" 
+                    onClick={(e) => handleNavClick(e, 'about')}
+                    className="flex items-center gap-2 px-4 py-2 text-zinc-800 hover:text-amber-600 transition-colors font-Strait font-bold"
+                  >
+                    <HiUser className="text-xl" />
+                    About
+                  </a>
                 </li>
                 <li>
-                  <Nav href="#works" icon={HiBriefcase}>Works</Nav>
+                  <a 
+                    href="#works" 
+                    onClick={(e) => handleNavClick(e, 'works')}
+                    className="flex items-center gap-2 px-4 py-2 text-zinc-800 hover:text-amber-600 transition-colors font-Strait font-bold"
+                  >
+                    <HiBriefcase className="text-xl" />
+                    Works
+                  </a>
                 </li>
                 <li>
-                  <Nav href="#contact" icon={HiMail}>Contact</Nav>
+                  <a 
+                    href="#contact" 
+                    onClick={(e) => handleNavClick(e, 'contact')}
+                    className="flex items-center gap-2 px-4 py-2 text-zinc-800 hover:text-amber-600 transition-colors font-Strait font-bold"
+                  >
+                    <HiMail className="text-xl" />
+                    Contact
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -89,7 +133,7 @@ function App() {
                 <li>
                   <a 
                     href="#about" 
-                    onClick={handleNavClick}
+                    onClick={(e) => handleNavClick(e, 'about')}
                     className="flex items-center gap-2 px-4 py-3 text-zinc-800 hover:bg-zinc-300 rounded-lg transition-colors font-Strait font-bold"
                   >
                     <HiUser className="text-xl" />
@@ -99,7 +143,7 @@ function App() {
                 <li>
                   <a 
                     href="#works" 
-                    onClick={handleNavClick}
+                    onClick={(e) => handleNavClick(e, 'works')}
                     className="flex items-center gap-2 px-4 py-3 text-zinc-800 hover:bg-zinc-300 rounded-lg transition-colors font-Strait font-bold"
                   >
                     <HiBriefcase className="text-xl" />
@@ -109,7 +153,7 @@ function App() {
                 <li>
                   <a 
                     href="#contact" 
-                    onClick={handleNavClick}
+                    onClick={(e) => handleNavClick(e, 'contact')}
                     className="flex items-center gap-2 px-4 py-3 text-zinc-800 hover:bg-zinc-300 rounded-lg transition-colors font-Strait font-bold"
                   >
                     <HiMail className="text-xl" />
@@ -158,7 +202,10 @@ function App() {
               <p className="text-base sm:text-xl font-Strait font-bold text-zinc-800 mb-4 sm:mb-6">
                 Get to know me more!
               </p>
-              <a href="#about">
+              <a 
+                href="#about" 
+                onClick={(e) => handleNavClick(e, 'about')}
+              >
                 <Button />
               </a>
               </ScrollFadeIn>

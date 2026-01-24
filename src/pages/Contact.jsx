@@ -70,7 +70,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative w-full">
+    <section id="contact" className="relative w-full mt-10">
       {/* First Article - Floating Contact Form */}
       <article className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-32 mt-10 sm:mt-20 border-t-2 border-zinc-700 pt-5">
         <ScrollFadeIn>

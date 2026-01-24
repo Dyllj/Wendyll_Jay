@@ -1,47 +1,157 @@
-import React from 'react';
-import TechStack from '../TechStack/TechStack';
-import IconLabel from '../Icon/Icon';
-import { FaGithub, FaFileAlt, FaGlobe } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaGithub, FaExternalLinkAlt, FaFileAlt } from 'react-icons/fa';
 
 const ProjectCard = ({ title, description, image, techStack, links, category }) => {
-  const getCategoryColor = () => {
-    switch (category) {
-      case 'Featured':
-        return 'rgb(217, 119, 6)';
-      case 'Personal':
-        return 'rgb(37, 99, 235)';
-      default:
-        return 'rgb(156, 163, 175)';
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [touchStartTime, setTouchStartTime] = useState(0);
+
+  const handleTouchStart = () => {
+    setTouchStartTime(Date.now());
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchDuration = Date.now() - touchStartTime;
+    // Only flip if it's a tap (not a scroll)
+    if (touchDuration < 200) {
+      e.preventDefault();
+      setIsFlipped(!isFlipped);
     }
   };
 
-  return (
-    <div
-      className="group relative w-full sm:w-60 h-64 sm:h-80 rounded-lg shadow-2xl transition-all duration-500 cursor-pointer hover:scale-105 sm:hover:scale-110 hover:rounded-2xl overflow-hidden mx-auto"
-      style={{ backgroundColor: getCategoryColor() }}
-    >
-      {/* First Content - Image */}
-      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-100 transition-all duration-500 group-hover:h-0 group-hover:opacity-0">
-        <img src={image} alt={title} className="w-full h-full object-cover rounded-lg" />
-      </div>
+  const handleClick = () => {
+    // For desktop, toggle on click
+    setIsFlipped(!isFlipped);
+  };
 
-      {/* Second Content - Details */}
-      <div className="absolute top-0 left-0 w-full h-0 opacity-0 flex justify-center items-center bg-black/90 rounded-2xl transition-all duration-500 group-hover:h-full group-hover:opacity-100">
-        <div className="p-3 sm:p-4 flex flex-col gap-2 sm:gap-3 w-full overflow-y-auto">
-          <h3 className="text-white font-Strait font-bold text-base sm:text-lg m-0">{title}</h3>
-          <p className="text-gray-300 font-Strait text-xs sm:text-sm m-0 leading-relaxed">{description}</p>
-          <TechStack technologies={techStack} />
-          
-          <div className="flex gap-2 sm:gap-3 mt-2">
-            {links.github && (
-              <IconLabel icon={FaGithub} href={links.github} ariaLabel="GitHub" />
-            )}
-            {links.docs && (
-              <IconLabel icon={FaFileAlt} href={links.docs} ariaLabel="Documentation" />
-            )}
-            {links.web && (
-              <IconLabel icon={FaGlobe} href={links.web} ariaLabel="Website" />
-            )}
+  return (
+    <div 
+      className="relative w-full h-80 perspective-1000 cursor-pointer"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onClick={handleClick}
+    >
+      <div 
+        className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${
+          isFlipped ? 'rotate-y-180' : ''
+        }`}
+        style={{
+          transformStyle: 'preserve-3d',
+          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
+        }}
+      >
+        {/* Front of Card */}
+        <div 
+          className="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-xl"
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          <div className="relative w-full h-full group">
+            <img 
+              src={image} 
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent">
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-xl font-bold text-white mb-2 font-Strait">
+                  {title}
+                </h3>
+                <p className="text-amber-400 text-sm font-Strait font-semibold">
+                  Tap to see details
+                </p>
+              </div>
+            </div>
+            {/* Category Badge */}
+            <div className="absolute top-4 right-4">
+              <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                category === 'Featured' 
+                  ? 'bg-amber-600 text-white' 
+                  : 'bg-zinc-700 text-zinc-200'
+              }`}>
+                {category}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Back of Card */}
+        <div 
+          className="absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-xl bg-zinc-900"
+          style={{ 
+            backfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg)'
+          }}
+        >
+          <div className="w-full h-full p-6 flex flex-col justify-between">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-3 font-Strait">
+                {title}
+              </h3>
+              <p className="text-zinc-300 text-sm mb-4 font-Strait leading-relaxed">
+                {description}
+              </p>
+              
+              {/* Tech Stack */}
+              <div className="mb-4">
+                <h4 className="text-amber-600 font-semibold text-sm mb-2 font-Strait">
+                  Tech Stack:
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {techStack.map((tech, index) => (
+                    <span 
+                      key={index}
+                      className="px-2 py-1 bg-zinc-800 text-zinc-300 rounded text-xs font-Strait"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Links */}
+            <div className="flex gap-3 mt-auto">
+              {links.github && (
+                <a
+                  href={links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-colors"
+                >
+                  <FaGithub className="text-lg" />
+                  <span className="text-sm font-Strait">Code</span>
+                </a>
+              )}
+              {links.web && (
+                <a
+                  href={links.web}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors"
+                >
+                  <FaExternalLinkAlt className="text-lg" />
+                  <span className="text-sm font-Strait">Live</span>
+                </a>
+              )}
+              {links.docs && (
+                <a
+                  href={links.docs}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                >
+                  <FaFileAlt className="text-lg" />
+                  <span className="text-sm font-Strait">Docs</span>
+                </a>
+              )}
+            </div>
+
+            {/* Tap again to flip back hint */}
+            <p className="text-zinc-500 text-xs text-center mt-3 font-Strait">
+              Tap again to flip back
+            </p>
           </div>
         </div>
       </div>
