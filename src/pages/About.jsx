@@ -83,6 +83,9 @@ const About = () => {
                   <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
                     UI/UX Design
                   </li>
+                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-30 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
+                    S. E. O.
+                  </li>
                   <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
                     Front-end Development
                   </li>
