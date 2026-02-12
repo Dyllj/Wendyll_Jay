@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import SplitText from './components/SplitText/Split_Text'
 import Button from './components/Button/Button'
 import ScrollFadeIn from './components/ScrollFadeIn/Scroll_FadeIn'
+import ParticlesBackground from './components/lightswind/particles-background'
 import myself from './assets/myself.png';
 import { HiUser, HiBriefcase, HiMail } from 'react-icons/hi';
 import Nav from './components/Navs/Nav'
@@ -19,7 +20,7 @@ function App() {
     
     const element = document.getElementById(targetId);
     if (element) {
-      const headerHeight = 64; // Adjust this to match your header height
+      const headerHeight = 64;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
@@ -28,7 +29,6 @@ function App() {
         behavior: 'smooth'
       });
 
-      // Update URL hash
       window.history.pushState(null, '', `#${targetId}`);
     }
   };
@@ -38,8 +38,6 @@ function App() {
     setIsMenuOpen(false);
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Remove hash from URL
     window.history.pushState(null, '', window.location.pathname);
   };
 
@@ -145,17 +143,33 @@ function App() {
         </div>
       </header>
       
-      {/* Hero Section */}
-      <article className="bg-linear-to-b from-zinc-200 to-zinc-800 min-h-screen flex items-center pt-20 sm:pt-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-30 md:mb-1">
+      {/* Hero Section — particles replace the gradient background */}
+      <article className="relative bg-zinc-200 min-h-screen flex items-center pt-20 sm:pt-0 overflow-hidden">
+
+        {/* Particles layer — fills the entire hero behind all content */}
+        <ParticlesBackground
+          colors={['#d97706', '#a16207', '#fbbf24', '#78716c', '#44403c']}
+          size={5}
+          countDesktop={100}
+          countTablet={80}
+          countMobile={60}
+          zIndex={0}
+          height="100%"
+        />
+
+        {/* A subtle dark-to-transparent overlay so text stays readable */}
+        <div className="absolute inset-0 bg-linear-to-b from-zinc-200/60 via-transparent to-zinc-800/80 pointer-events-none z-1" />
+
+        {/* Content sits above the particles */}
+        <div className="relative z-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-30 md:mb-1">
           <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-10">
             <figure className="shrink-0">
               <ScrollFadeIn>
-              <img 
-                src={myself}
-                alt="Wendyll Jay Tautoan" 
-                className="w-48 h-60 mb-15 sm:w-64 sm:h-80 md:w-80 md:h-100 rounded-full object-cover shadow-2xl ring-4 ring-zinc-800"
-              />
+                <img 
+                  src={myself}
+                  alt="Wendyll Jay Tautoan" 
+                  className="w-48 h-60 mb-15 sm:w-64 sm:h-80 md:w-80 md:h-100 rounded-full object-cover shadow-2xl ring-4 ring-zinc-800"
+                />
               </ScrollFadeIn>
             </figure>
             
@@ -175,18 +189,18 @@ function App() {
                 tag="h1"
               />
               <ScrollFadeIn>
-              <p className="text-base sm:text-xl font-Strait font-bold text-zinc-800">
-                A developer with a passion for creating innovative and efficient solutions through code. 
-              </p>
-              <p className="text-base sm:text-xl font-Strait font-bold text-zinc-800 mb-4 sm:mb-6">
-                Get to know me more!
-              </p>
-              <a 
-                href="#about" 
-                onClick={(e) => handleNavClick(e, 'about')}
-              >
-                <Button />
-              </a>
+                <p className="text-base sm:text-xl font-Strait font-bold text-zinc-800">
+                  A developer with a passion for creating innovative and efficient solutions through code. 
+                </p>
+                <p className="text-base sm:text-xl font-Strait font-bold text-zinc-800 mb-4 sm:mb-6">
+                  Get to know me more!
+                </p>
+                <a 
+                  href="#about" 
+                  onClick={(e) => handleNavClick(e, 'about')}
+                >
+                  <Button />
+                </a>
               </ScrollFadeIn>
             </div>
           </div>
