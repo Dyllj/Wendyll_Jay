@@ -77,21 +77,21 @@ const About = () => {
               <aside className="mt-6 lg:mt-25 lg:ml-15 p-4 sm:p-5 rounded-lg w-full lg:max-w-sm h-fit border-2 border-zinc-700 bg-zinc-800 shadow-lg shadow-amber-600/20">
                 <h3 className="text-xl sm:text-2xl font-Strait font-semibold mb-3 sm:mb-4 text-amber-600">Key Facts</h3>
                 <ul className="space-y-2 sm:space-y-3">
-                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-45 p-2 rounded-xl hover:bg-zinc-800 hover:border-amber-600 hover:text-zinc-200 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
-                    IOT Development
-                  </li>
-                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
-                    UI/UX Design
-                  </li>
-                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-30 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
-                    S. E. O.
-                  </li>
-                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
-                    Front-end Development
-                  </li>
-                  <li className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
+                  <a href="https://www.enterprisenetworkingplanet.com/management/iot-development/" className='font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-45 p-2 rounded-xl hover:bg-zinc-800 hover:border-amber-600 hover:text-zinc-200 transition-all ease-in-out cursor-pointer text-xs sm:text-base'>
+                  IOT Development
+                  </a>
+                  <a href="https://www.figma.com/resource-library/difference-between-ui-and-ux/" className='font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-40 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base'>
+                  UI/UX Design
+                  </a>
+                  <a href="https://searchengineland.com/guide/what-is-seo" className='font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-30 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base'>
+                  S. E. O.
+                  </a>
+                  <a href="https://www.geeksforgeeks.org/blogs/front-end-development/"  className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
+                    Front-end Developer
+                  </a>                
+                  <a href='https://aws.amazon.com/what-is/full-stack-development/'  className="font-Strait font-bold flex items-center justify-center border-2 border-zinc-300 text-gray-700 bg-zinc-200 w-full sm:w-55 p-2 rounded-xl hover:bg-zinc-800 hover:text-zinc-200 hover:border-amber-600 transition-all ease-in-out cursor-pointer text-xs sm:text-base">
                     Full-Stack Developer
-                  </li>
+                  </a>
                 </ul>
               </aside>
             </div>
