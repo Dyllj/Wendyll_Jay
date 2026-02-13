@@ -66,7 +66,9 @@ const About = () => {
                   I'm a software developer focused on creating intuitive and engaging user experiences. 
                   My work spans web development, where I design clean, responsive interfaces, to IoT 
                   projects like automated water-level monitors and smart dashboards that connect software 
-                  with real-world applications.
+                  with real-world applications using
+                  <br />
+                  <span className="text-amber-600">AI assisted development</span>.
                 </p>
                 <p className="font-Strait font-bold text-zinc-300 leading-relaxed text-sm sm:text-lg mt-3 sm:mt-4 sm:ml-36">
                   I enjoy collaborating on projects that thrive on teamwork and creative problem-solving, 
