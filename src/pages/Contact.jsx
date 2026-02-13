@@ -192,12 +192,12 @@ const Contact = () => {
 
             {/* Right: Additional Info */}
             <div className="text-center md:text-right">
-              <p className="text-zinc-900 mb-2 text-sm sm:text-md font-Strait font-bold">
+              <p className="text-zinc-900 mb-2 text-md sm:text-sm font-Strait font-bold">
                 <a href="mailto:tautoanwendylljay@gmail.com" className="hover:text-zinc-300 transition-colors break-all">
                   tautoanwendylljay@gmail.com
                 </a>
               </p>
-              <p className="text-zinc-900 text-sm sm:text-md font-Strait font-bold">
+              <p className="text-zinc-900 text-md sm:text-sm font-Strait font-bold">
                 Guripan, Mahayag, Zamboanga Del Sur, Philippines
               </p>
             </div>
@@ -205,7 +205,7 @@ const Contact = () => {
 
           {/* Copyright */}
           <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t-3 border-zinc-800 text-center pb-6 sm:pb-8">
-            <p className="text-zinc-900 text-sm sm:text-md font-Strait font-bold">
+            <p className="text-zinc-900 text-md sm:text-md font-Strait font-bold">
               © 2025 Wendyll Jay Tautoan. All rights reserved.
             </p>
           </div>

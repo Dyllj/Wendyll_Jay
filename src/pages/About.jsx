@@ -37,7 +37,7 @@ const About = () => {
     <ScrollFadeIn>
       <section id="about" className="w-full bg-zinc-800 py-8 sm:py-16 -mt-12 sm:-mt-22">
         {/* About Me Section */}
-        <div className="-mt-8 sm:-mt-16 relative z-10 w-full bg-linear-to-b from-zinc-900 to-zinc-800 py-8 sm:py-16">
+        <div className="-mt-8 sm:-mt-16 relative z-10 w-full bg-zinc-800 py-8 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-10 mb-8 sm:mb-16">
               <div className="flex-1">
