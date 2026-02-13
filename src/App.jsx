@@ -144,15 +144,15 @@ function App() {
       </header>
       
       {/* Hero Section — particles replace the gradient background */}
-      <article className="relative bg-zinc-200 min-h-screen flex items-center pt-20 sm:pt-0 overflow-hidden">
+      <article className="relative bg-zinc-200 min-h-screen flex items-center overflow-hidden">
 
         {/* Particles layer — fills the entire hero behind all content */}
         <ParticlesBackground
           colors={['#d97706', '#a16207', '#fbbf24', '#78716c', '#44403c']}
-          size={5}
-          countDesktop={100}
-          countTablet={80}
-          countMobile={60}
+          size={6}
+          countDesktop={200}
+          countTablet={100}
+          countMobile={80}
           zIndex={0}
           height="100%"
         />
