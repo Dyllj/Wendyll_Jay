@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-800">
+    <div className="min-h-screen bg-zinc-800 overflow-x-hidden">
       <header className="bg-zinc-200 shadow-lg fixed w-full top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-3 sm:py-4">
@@ -74,7 +74,7 @@ function App() {
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden text-zinc-800 focus:outline-none mr-5"
+              className="md:hidden text-zinc-800 focus:outline-none mr-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >

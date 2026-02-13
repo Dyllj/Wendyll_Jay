@@ -12,7 +12,7 @@ const ProjectCard = ({ title, description, image, techStack, links, category }) 
   const handleTouchEnd = (e) => {
     const touchDuration = Date.now() - touchStartTime;
     // Only flip if it's a tap (not a scroll)
-    if (touchDuration < 200) {
+    if (touchDuration < 100) {
       e.preventDefault();
       setIsFlipped(!isFlipped);
     }
