@@ -30,66 +30,77 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
     const script = document.createElement('script');
     script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
     script.onload = () => {
-      const particlesElement = document.getElementById('js-particles');
-      if (particlesElement && window.particlesJS) {
-        const getParticleCount = () => {
-          const screenWidth = window.innerWidth;
-          if (screenWidth > 1024) return countDesktop;
-          if (screenWidth > 768) return countTablet;
-          return countMobile;
-        };
+      // Small delay to ensure the container has its final dimensions in the DOM
+      requestAnimationFrame(() => {
+        const particlesElement = document.getElementById('js-particles');
+        if (particlesElement && window.particlesJS) {
+          const getParticleCount = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 1024) return countDesktop;
+            if (screenWidth > 768) return countTablet;
+            return countMobile;
+          };
 
-        window.particlesJS('js-particles', {
-          particles: {
-            number: {
-              value: getParticleCount(),
-            },
-            color: {
-              value: colors,
-            },
-            shape: {
-              type: 'circle',
-            },
-            opacity: {
-              value: 1,
-              random: false,
-            },
-            size: {
-              value: size,
-              random: true,
-            },
-            line_linked: {
-              enable: false,
-            },
-            move: {
-              enable: true,
-              speed: 2,
-              direction: 'none',
-              random: true,
-              straight: false,
-              out_mode: 'out',
-            },
-          },
-          interactivity: {
-            detect_on: 'canvas',
-            events: {
-              onhover: {
+          window.particlesJS('js-particles', {
+            particles: {
+              number: {
+                value: getParticleCount(),
+              },
+              color: {
+                value: colors,
+              },
+              shape: {
+                type: 'circle',
+              },
+              opacity: {
+                value: 1,
+                random: false,
+              },
+              size: {
+                value: size,
+                random: true,
+              },
+              line_linked: {
                 enable: false,
               },
-              onclick: {
-                enable: false,
+              move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: true,
+                straight: false,
+                out_mode: 'out',
               },
-              resize: true,
             },
-          },
-          retina_detect: true,
-        });
-      }
+            interactivity: {
+              detect_on: 'canvas',
+              events: {
+                onhover: {
+                  enable: false,
+                },
+                onclick: {
+                  enable: false,
+                },
+                resize: true,
+              },
+            },
+            retina_detect: true,
+          });
+        }
+      });
     };
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      // Clean up the canvas when the component unmounts
+      const particlesElement = document.getElementById('js-particles');
+      if (particlesElement) {
+        const canvas = particlesElement.querySelector('canvas');
+        if (canvas) canvas.remove();
+      }
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, [colors, size, countDesktop, countTablet, countMobile]);
 
@@ -99,6 +110,7 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
       style={{
         width: '100%',
         height: height,
+        minHeight: height,
         position: 'absolute',
         top: 0,
         left: 0,
@@ -107,10 +119,17 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
       }}
     >
       <style>{`
+        #js-particles {
+          overflow: hidden;
+        }
+
         #js-particles canvas {
-          position: absolute;
-          width: 100%;
-          height: 100%;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          display: block;
         }
 
         .particles-js-canvas-el {
@@ -122,7 +141,7 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
           filter: url(#glow);
         }
       `}</style>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ position: 'absolute', width: 0, height: 0 }}>
         <defs>
           <filter id="glow">
             <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
